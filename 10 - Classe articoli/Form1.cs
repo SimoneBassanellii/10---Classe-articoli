@@ -6,7 +6,7 @@ namespace _10___Classe_articoli
         {
             InitializeComponent();
         }
-        public string[] 
+        public string[] Scontrino = new string[1000];
         private void Form1_Load(object sender, EventArgs e)
         {
 
