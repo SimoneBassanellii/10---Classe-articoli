@@ -6,7 +6,7 @@ namespace _10___Classe_articoli
         {
             InitializeComponent();
         }
-
+        public string[] 
         private void Form1_Load(object sender, EventArgs e)
         {
 

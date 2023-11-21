@@ -13,12 +13,12 @@ namespace _10___Classe_articoli
         protected double _prezzo;
         protected bool _carta = false;
 
-        static  int codice
+
+        static int codice
         {
             get { return codice;}
             set { codice = value;}
         }
-        
         static string name
         {
             get { return name;}
@@ -27,10 +27,18 @@ namespace _10___Classe_articoli
         static double prezzo 
         {
             get { return prezzo;}
-            set { prezzo = value;}
+            set 
+            {
+                if(prezzo > 0) 
+                {
+                    prezzo = value;
+                }
+                else
+                {
+                    Console.WriteLine(Console.Error);                  
+                }
+            }
         }
-
-
         public Articolo(int Codice, string Name, double Prezzo, bool Carta)
         {
             this._codice = Codice;
@@ -53,5 +61,7 @@ namespace _10___Classe_articoli
                 }
             }
         }
+
+
     }
 }
