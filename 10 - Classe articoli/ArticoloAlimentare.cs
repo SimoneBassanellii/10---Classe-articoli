@@ -8,17 +8,21 @@ namespace _10___Classe_articoli
 {
     public class ArticoloAlimentare : Articolo
     {
-        protected string _anno;
+        
+        public DateTime DataScadenza { get; set; }
 
-        static int anno
+        public ArticoloAlimentare(string codice, string descrizione, double prezzo, DateTime dataScadenza) : base(codice, descrizione, prezzo)
         {
-            get { return anno; }
-            set { anno = value; }
+            DataScadenza = dataScadenza;
         }
 
-        public ArticoloAlimentare() 
-        {
-            anno = datatime.anno;
+        public override string ToString()
+        { 
+            return base.ToString() + $"Data scadenza: {DataScadenza.ToShortDateString()}";
         }
+
+
+
+        
     }
 }
