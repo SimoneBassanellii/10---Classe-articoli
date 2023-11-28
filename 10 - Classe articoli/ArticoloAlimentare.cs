@@ -8,8 +8,23 @@ namespace _10___Classe_articoli
 {
     public class ArticoloAlimentare : Articolo
     {
-        
-        public DateTime DataScadenza { get; set; }
+        DateTime dataMinima = new DateTime(2023,1,1);
+
+        public DateTime DataScadenza
+        {
+            get { return DataScadenza; }
+            set
+            {
+                if (DataScadenza < dataMinima)
+                {
+                    DataScadenza = value;
+                }
+                else
+                {
+                    Console.WriteLine(Console.Error);
+                }
+            }
+        }
 
         public ArticoloAlimentare(string codice, string descrizione, double prezzo, DateTime dataScadenza) : base(codice, descrizione, prezzo)
         {

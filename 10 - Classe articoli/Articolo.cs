@@ -62,6 +62,10 @@ namespace _10___Classe_articoli
             }
         }
 
+        public void Compare() 
+        {
+            
+        }
 
     }
 }
